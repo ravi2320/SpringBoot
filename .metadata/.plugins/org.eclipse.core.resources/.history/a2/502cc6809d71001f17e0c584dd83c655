@@ -1,0 +1,23 @@
+package com.springboot;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.context.ApplicationContext;
+
+import com.springboot.entities.Student;
+import com.springboot.repository.StudentRepo;
+
+public class Application {
+
+	public static void main(String[] args) {
+		ApplicationContext context = SpringApplication.run(Application.class, args);
+	
+		StudentRepo studentRepo = context.getBean(StudentRepo.class);
+		
+		Student st = new Student();
+		st.setStudName("Ravindra");
+		st.setStudAddr("Pune");
+		
+		studentRepo.save(st);
+	}
+
+}

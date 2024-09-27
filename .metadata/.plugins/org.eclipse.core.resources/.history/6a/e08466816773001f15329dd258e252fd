@@ -1,0 +1,16 @@
+package com.springboot.repository;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.repository.CrudRepository;
+
+import com.springboot.entities.Student;
+
+//public interface StudentRepo extends CrudRepository<Student, Integer>
+public interface StudentRepo extends JpaRepository<Student, Integer>
+{
+	Student findByStudName(String studName);
+	
+	Student findByStudAddr(String studAddr);
+	
+	Student findByStudNameAndStudAddr(String studName, String studAddr);
+}

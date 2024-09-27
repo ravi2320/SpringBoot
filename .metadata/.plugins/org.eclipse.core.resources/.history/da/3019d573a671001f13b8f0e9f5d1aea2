@@ -1,0 +1,32 @@
+package com.springboot;
+
+import java.util.List;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.ApplicationContext;
+
+import com.springboot.entities.Student;
+import com.springboot.repository.StudentRepo;
+
+@SpringBootApplication  // This is essential
+public class Application {
+
+    public static void main(String[] args) {
+        ApplicationContext context = SpringApplication.run(Application.class, args);
+    
+        StudentRepo studentRepo = context.getBean(StudentRepo.class);
+        
+        Student st = new Student();
+        st.setStudName("Rajendra");
+        st.setStudAddr("Pune");
+        studentRepo.save(st);
+        
+        List<Student> list = (List<Student>) studentRepo.findAll();
+        
+        list.forEach(student->System.out.println(student));
+        
+        Student stud = studentRepo.findById(1).get();
+        System.out.println(stud);
+    }
+}

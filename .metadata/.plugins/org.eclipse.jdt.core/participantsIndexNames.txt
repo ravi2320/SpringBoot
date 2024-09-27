@@ -1,0 +1,7 @@
+INDEX VERSION 1.134
+F:\Courses\Spring Boot Projects\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\94145822.index
+\Enotes_Tracker\src\main\resources
+F:\Courses\Spring Boot Projects\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\286125626.index
+\03_SpringMVCBoot\src\main\java
+F:\Courses\Spring Boot Projects\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\919639496.index
+\04_SpringBootApp\src\main\java
